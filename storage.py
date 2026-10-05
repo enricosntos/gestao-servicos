@@ -6,7 +6,7 @@ DATA_FILE = Path("data/dados.json")
 def carregar_dados():
     if not DATA_FILE.exists():
         return {"clientes": [], "servicos": [],
-                "proximo_id_cliente": 1, "proximo_id_servico": 1}
+                "proximo_id_clientes": 1, "proximo_id_servico": 1}
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
